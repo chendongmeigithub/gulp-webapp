@@ -1,0 +1,57 @@
+//- 引用图片
+mixin img(src)
+    - src = /\.(jpg|png|gif)$/i.test(src) ? src : src + '.png';
+    - src = /\//.test(src) ? src : '../image/' + src;
+    img(src=src)&attributes(attributes)
+
+mixin styles(files)
+    each file in files
+        link(rel="stylesheet" href="#{file}")
+mixin scripts(files)
+    each file in files
+        script(src="#{file}")
+//- 用户中心面板屑
+mixin bread-thumb(text, link)
+    span 您当前的位置
+    i &gt;
+    a(href="/") 首页
+    i &gt;
+    a(href="#{link}")= text
+
+//- 用户中心左侧主菜单
+mixin user-center-left-menu(page)
+    .sub
+        h3(style="border-top:0") 我的微波超市
+        ul
+            li
+                a(href="person-center.html" class={current: page == 'person-center'}) 个人中心
+            li
+                a(href="orders.html" class={current: page == 'orders'}) 我的订单
+            li
+                a(href="custom-orders.html" class={current: page == 'custom-orders'}) 定制单
+                    span.number.
+                        (<i>1</i>)
+            li
+                a(href="find-orders.html" class={current: page == 'find-orders'}) 找货单
+                    span.number.
+                        (<i>1</i>)
+            li
+                a(href="follow-goods.html" class={current: page == 'follow-goods'}) 我的关注
+            li
+                a(href="finance-info.html" class={current: page == 'finance-info'}) 财务信息
+            li
+                a(href="profile.html" class={current: page == 'profile'}) 个人资料
+            li
+                a(href="change-password.html" class={current: page == 'change-password'}) 修改密码
+            li
+                a(href="address.html" class={current: page == 'address'}) 收货地址
+            li
+                a(href="invoice-info.html" class={current: page == 'invoice-info'}) 发票信息
+    .sub
+        h3 我的公司
+        ul
+            
+            li
+                a(href="company-profile.html" class={current: page == 'company-profile'}) 公司基本资料
+            li
+                a(href="company-member.html" class={current: page == 'company-member'}) 公司成员

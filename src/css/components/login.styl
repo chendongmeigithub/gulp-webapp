@@ -1,0 +1,40 @@
+.login-page
+  .img-wrap
+    line-height m(233) 
+    text-align center
+    img
+      width m(250/2)
+      height @width 
+      vertical-align middle
+  .login-page-content
+      padding m(25) m(20) 0
+      input
+        width 100%
+        height m(44)
+        border-radius m(3)
+        border 1px solid #CCCCCC
+        text-indent m(10)
+      input:first-child
+        margin-bottom m(20)
+      input:nth-child(2)
+        margin-bottom m(30)
+      input:focus
+        border 1px solid #FFA133
+      .button-gray
+        letter-spacing m(7)
+        background-color #C2C2C2
+      .button-orange
+        letter-spacing m(7)
+        margin-bottom m(15)
+        background-color #FFA133
+    .login-page-content:after
+        content ""
+        display block
+        height 0
+        clear both
+        visibility hidden
+  .button-component
+    margin-bottom m(15)
+    color #f
+.button-red
+  background-color red

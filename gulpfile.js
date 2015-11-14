@@ -24,7 +24,7 @@ gulp.task('jade', function(){
 //编译js
 gulp.task('script', function(){
   gulp.src('./src/js/**/*.js')
-    .pipe(gulp.dest('./dist/js'))
+    .pipe(gulp.dest('./dist/public/js'))
     //.pipe(rename({suffix: '.min'}))
     //.pipe(uglify())
     //.pipe(gulp.dest('./dist/min/js'))
@@ -36,7 +36,7 @@ gulp.task('stylus', function () {
   gulp.src('./src/css/**/*.styl')
     .pipe(stylus())
     .pipe(autoprefixer())
-    .pipe(gulp.dest('./dist/css'))
+    .pipe(gulp.dest('./dist/public/css'))
     //.pipe(rename({suffix: '.min'}))
     //.pipe(minifycss())
     //.pipe(gulp.dest('./dist/min/css'))
@@ -46,7 +46,7 @@ gulp.task('stylus', function () {
 //复制图片到指定目录
 gulp.task('image', function(){
   gulp.src('./src/image/**/*.{png,gif,jpg,svg}')
-    .pipe(gulp.dest('./dist/image'));
+    .pipe(gulp.dest('./dist/public/images'));
 });
 
 //更新文件后浏览器同步

@@ -1,0 +1,171 @@
+.allmap-wrap
+    position fixed
+    z-index 1000
+    height 100%
+    width 100%
+    left 100%
+    top 0
+    transition .3s
+    &.active
+        left 0
+#allmap
+    width 100%
+    height 100%  
+// $border=1px solid #e0
+.activity-statistics-page
+    position absolute
+    width 100%
+    min-height 100%
+    background-color #F8F8F8
+    .pie
+        width 100%
+        height m(300)
+        background-color #fff
+    .pie-param
+        width 100%
+        height auto
+        padding-bottom m(20)
+        .pie-sum
+            color #000
+            font-weight 700
+            text-align center
+            line-height m(44)
+        .pie-data
+            overflow auto
+            .single-data
+                float left
+                margin-top m(10)
+                width 25%
+                text-align center
+                .single-pic
+                    width m(60)
+                    height @width 
+                    border 1px solid border-color
+                    border-radius 50%
+                    background-color #fff
+                .single-name
+                    margin-top m(10)
+.activity-detail-page
+    background-color #f8f8f8
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    overflow auto
+    .activity-time,
+    .activity-address,
+    .activity-tel
+        display block
+        font-size m(15)
+        height m(44)
+        line-height m(44)
+        margin m(20) m(10) m(10)
+        border 1px solid #dddddd
+        border-radius m(3)
+        position relative
+        >span
+            margin-left m(15)
+            font-size m(14)
+        >img
+            width m(20)
+            height m(20)
+            position absolute
+            right m(17)
+            top m(12)
+    .activity-address
+        margin-top 0
+        margin-bottom 0
+    .activity-tel
+        margin-top m(10)
+    .activity-join
+        margin 0 m(10)
+    .activity-button
+        border-top 1px solid #dddddd
+        border-bottom 1px solid #dddddd
+        height m(60)
+        line-height m(60)
+        background-color #FFFFFF
+        margin m(20) 0 m(48)
+        position relative
+        >a
+            position absolute
+            width m(90)
+            height m(35)
+            line-height m(35)
+            text-align center
+            border 1px solid #dddddd
+            webkit-border-radius m(17)
+            border-radius m(17)
+            margin-top m(12)
+            >img
+                width m(12)
+                margin-right m(5)
+        >a:first-child
+            left m(20)
+        >a:nth-child(2)
+            left 50%
+            margin-left m(-45)
+        >a:last-child
+            right m(20)
+
+// code by ody
+
+/*
+
+        <div className="qrc-sign">
+          <div className="qrc-sign-content">
+            <h3>请选择签到方式</h3>
+            <div className="t-layout qrc-sign-img">
+              <div className="t-item">
+                <img src="public/images/sign.png" alt=""/>
+              </div>
+              <div className="t-item">
+                <img src="public/images/qrc.png" alt=""/>
+              </div>
+            </div>
+            <div className="t-layout">
+              <div className="t-item"><button>取消</button></div>
+              <div className="t-item bl"><button>确定</button></div>
+            </div>
+          </div>
+        </div>
+*/
+/*.bl
+    border-left $border
+.qrc-sign
+    position absolute
+    top m(60)
+    left 0
+    right 0
+    bottom 0
+    background rgba(0,0,0,.5) 
+    z-index 100
+    display none
+    h3
+        font-size m(15) 
+        padding-top m(10)
+        text-indent 2em  
+        color #3
+    .t-layout
+        text-align center
+    .qrc-sign-content
+        width 80%  
+        position absolute
+        top 50% 
+        left 50% 
+        transform translate(-50%, -50%)
+        background #FFF 
+        border-radius m(6)
+    .qrc-sign-img
+        div
+            padding m(35/2) 0
+    img
+        width m(55) 
+        height m(55) 
+    button
+        width 100%
+        line-height m(40)  
+        border 0
+        border-top $border*/
+// end

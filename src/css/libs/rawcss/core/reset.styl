@@ -5,6 +5,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+
 html {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
@@ -424,64 +425,3 @@ td,
 th {
   padding: 0;
 }
-
-
-/* Modifications for Kiss UI
-  ===========================================================================*/
-html {
-  -webkit-font-smoothing: antialiased;
-}
-
-textarea {
-  vertical-align: top;
-}
-
-/**
- * Remove list style
- */
-ul,
-ol {
-  list-style: none;
-}
-
-/**
- * Clear margins and paddings
- */
-ul,
-ol,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-button,
-textarea,
-input,
-p,
-dl,
-dt,
-dd{
-  padding:0;
-  margin:0;
-}
-
-/**
- * Set table width
- */
-table{
-  width:100%;
-}
-
-/**
- * 
- */
-
-html,
-body{
-  //取消默认点击颜色
-  -webkit-tap-highlight-color rgba(0,0,0,0);
-}
-
-
-

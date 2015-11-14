@@ -1,0 +1,65 @@
+$border=1px solid #e0
+.appraise-page
+  .head-bar-wrap
+    .right-comp
+      display block
+      color white !important
+  .main
+    background $garybg
+    .content
+      .content-sign
+        text-align center
+        margin-top m(60)
+        padding-bottom m(15)
+        img
+          width m(130)
+      .content-item
+        margin-top m(15)
+        text-align center
+        font-size big-font-size
+
+
+
+  //list-page
+  // .list-page
+.appraise-vote
+    .head-bar-right a
+        color #FFF 
+    h3
+        text-align center
+        line-height m(60)
+    .appraise-vote-l
+        line-height m(30) 
+    img
+        float left
+        width m(56)
+        height @width
+        border-radius 50%   
+        margin-right m(6) 
+    ul
+        li
+            border-bottom $border
+            padding-top m(16)
+            line-height m(28) 
+            overflow hidden
+            &:first-child
+                border-top $border
+    .appraise-vote-tt
+        font-size m(10)
+        ~div
+            background #f1f1f1 
+            line-height m(43)
+            padding-left m(6)  
+            padding-bottom 0
+            margin-top m(16)  
+        .appraise-lbl
+            display inline-block
+            padding 0 m(5)
+            border-radius m(8)
+            color #FFF 
+        div
+            for item,key in red #ff6600 #b75c2b
+                &:nth-child({key+1}) .appraise-lbl
+                    background item 
+    .appraise-vote-ac
+        padding-bottom m(16) 

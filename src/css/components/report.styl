@@ -1,0 +1,252 @@
+.report-send-page,
+.note-send-page
+  .head-bar-right,
+  .head-bar-left
+    position absolute
+    width m(50)
+    height m(50)
+    font-size middle-font-size
+    z-index 11
+    color #fff
+    &.head-bar-left
+      left m(20)
+  .head-bar-title
+    position absolute
+    width 100%
+    text-align center
+    z-index 10
+  .textarea
+    width 100%
+    height m(160)
+    resize none
+    outline 0
+    border 0
+  .img-box
+    width 100%
+    padding m(10)
+    background #fff
+    .img-item-box
+      width 20%
+      margin-left 10%
+      margin-bottom 1rem
+      position relative
+      overflow hidden
+      .img-item
+        min-width 100%
+        min-height 100%
+        position absolute
+        left 0
+    .img-submit
+      width 20%
+      margin-left 10%
+      background url($root + 'input-mode-switcher.png') center no-repeat
+      background-size 50%
+      border 2px solid border-color
+  .button-hide
+    display none
+  .forbid
+    pointer-events none
+//-思想汇报与漂流笔记列表
+.report-list
+  padding 0 m(10)
+  .report-list-item
+    padding m(10) 0
+    display block
+    border-bottom 1px solid border-color
+    //&:last-child
+    //  border-bottom 0
+    .item-pic
+      width 18%
+      border-radius 50%
+      position relative
+      overflow hidden
+      .con-img-img
+        position absolute
+        left 0
+        min-width 100%
+        min-height 100%
+    .item-info
+      width 80%
+      font-size middle-font-size
+      .name
+        color $black
+      .con
+        width 80%
+        .con-txt
+          padding m(10) 0
+          overflow-wrap break-word
+          word-wrap break-word
+        .con-img
+          width 100%
+          .con-img-box
+            position relative
+            width 30%
+            margin-right 2%
+            margin-bottom 2%
+            overflow hidden
+            .con-img-img
+              position absolute
+              left 0
+              min-width 100%
+    .appraisetrue
+      width 20%
+      height m(48)
+      text-align center
+      background url($root + 'y-appraise.png') center no-repeat
+      background-size 90%
+    .appraisefalse
+      width 20%
+      height m(48)
+      text-align center
+      background url($root + 'n-appraise.png') center no-repeat
+      background-size 90%
+    .rele-time
+      width 100%
+      font-size tiny-font-size
+      text-align left
+//党员评议列表页面
+&.appraise
+  .report-list-item
+    display flex
+    align-items center
+    .item-pic
+      background #ffefef
+      text-align center
+      .appraise
+        position absolute
+        top 50%
+        width 100%
+        font-size m(20)
+        margin-top m(-24)
+        color $black
+      .year
+        position absolute
+        top 50%
+        width 100%
+        font-size middle-font-size
+        color text-color
+    .item-info
+      width 60%
+      .con
+        width 100%
+        padding-left m(12)
+        font-size middle-font-size
+        color $black
+//党员评议结果列表页面
+&.result
+  .report-list-item
+    display flex
+    align-items center
+    .item-pic
+      width 12%
+      background #ffefef
+      text-align center
+      .appraise
+        position absolute
+        top 0
+        width 100%
+        font-size m(20)
+        height 100%
+        color $black
+        display flex
+        text-align center
+        justify-content center
+        align-items center
+    .item-info
+      width 88%
+      .con
+        width 100%
+        padding-left m(10)
+        font-size middle-font-size
+        color $black
+
+//-思想汇报与漂流笔记回复
+.reply-list
+  padding 0 m(10) m(36) m(10)
+  .reply-list-box
+    padding m(10)m(10) 0 m(10)
+    background-color $garybg
+    display block
+    .reply-list-item
+      padding-bottom m(10)
+      display block
+      border-bottom 1px solid border-color
+      .item-pic
+        width 18%
+        border-radius 50%
+        position relative
+        overflow hidden
+        .con-img-img
+          position absolute
+          left 0
+          min-width 100%
+          min-height 100%
+      .item-info
+        width 80%
+        font-size middle-font-size
+        .name
+          color $black
+        .con
+          position relative
+          width 100%
+          padding m(10) 0
+          .con-txt
+            width 80%
+            overflow-wrap break-word
+            word-wrap break-word
+          .praise
+            position absolute
+            right 0
+            top 50%
+            margin-top m(-17)
+            span,
+            i
+              width m(48)
+              display block
+              text-align center
+              &.icon
+                width m(24)
+                margin-left m(12)
+                border-radius m(12)
+                border 1px solid #e0e0e0
+                background transparent url("public/images/praise.png") no-repeat 0 0
+                background-size 100%
+                &.praised
+                  border 1px solid #ff7a33
+                  background #ff7a33 url("public/images/praise.png") no-repeat 0 m(-20)
+                  background-size 100%
+      .rele-time
+        width 80%
+        font-size tiny-font-size
+    &:last-child
+      .reply-list-item
+        border-bottom 0
+//-漂流笔记头部
+.note-page
+  .head-bar-wrap
+    .right-comp
+      width m(50)
+      height m(50)
+      background url($root + 'apply-list-add.png') center no-repeat
+      background-size 50%
+    .title-nav
+      position absolute
+      left 23%
+      top m(10)
+      width 54%
+      height m(25)
+      line-height m(25)
+      font-size m(15)
+      a
+        width 50%
+        background-color $red
+        color #fff
+        border 1px solid #fff
+        &.all
+          border-radius middle-radius 0 0 middle-radius
+        &.persion
+          border-radius 0 middle-radius middle-radius 0
+        &.active
+          pointer-events none
+          background-color #fff
+          color $red

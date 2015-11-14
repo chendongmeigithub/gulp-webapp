@@ -1,0 +1,332 @@
+$border=1px solid #e0
+$orange = #FF5900
+.red
+    color red
+.orange
+    color $orange
+.white
+    color #f
+.f-container
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    overflow auto
+    display flex
+    flex-direction column
+.f-1
+    flex 1
+    overflow auto
+    -webkit-overflow-scrolling touch
+.container1
+    margin 0 m(20)
+
+img(_url)
+    unless match('\.\w+$', _url)
+        _url = join('',_url,'.png')
+    return s('url(public/images/%s)',unquote(_url))
+a:visited
+    color inherit
+.m-desc-wrap
+    padding 0 m(10)
+    border-top $border
+    border-bottom $border
+    background #fff 
+.mt-20
+    margin-top m(10) 
+.mt-50
+    margin-top m(50)
+.rarrow
+    position absolute
+    top 50%
+    right m(5)
+    transform translate(0,-50%)
+    width m(15)
+    height m(15)  
+    background img(rarrow-g) 0 0 / 100% 100%
+.m-desc-item
+    display block
+    line-height m(45)
+    border-top $border 
+    position relative
+    &:first-child
+        border-top 0 
+    .m-desc-t
+        color #4d4d4d 
+    .m-desc-r
+        padding-right m(25)
+        float right
+        color #999 
+    input
+        width 100%
+        border 0 
+.user-comp-btn-wrap
+    text-align center
+    line-height m(29)
+    margin-top m(60) 
+    button
+        color #ff5900
+        border-radius m(30) 
+        border 1px solid
+        padding 0 m(40)
+        
+.lh-1
+    line-height m(60) 
+    img
+        width m(40)
+        height @width
+        border-radius 50%  
+        vertical-align middle
+.lh-2
+    line-height m(50) 
+.bg-gray
+    background #f5f5f5  
+// .user-center-page
+//     font-size m(15) 
+.u-foot-w
+    height m(50) 
+    text-align center
+    .u-foot-item
+        line-height normal
+        display table-cell
+        width m(2000)
+        &.current
+            color #ff0000
+            .icon
+                background-position 0 0 
+.icon
+    display inline-block
+    width m(25)
+    height m(25)
+    background-position 0 -100%
+    background-size 100% 200% 
+.dangyuan
+    width m(20)
+    height @width  
+    vertical-align middle
+    margin-right m(4) 
+.icon-d
+    background-image img(ww_34)
+.icon-l
+    background-image img(ww_35)
+.icon-m
+    background-image img(ww_36)
+.t-layout
+    display table
+    overflow hidden
+    .t-item
+        display table-cell
+        width m(2000)
+        vertical-align middle
+.uc-header
+    height m(250/2)
+    background img('uc-header-bg.jpg') 0 0 / 100% 100%
+    text-align center
+    color #fff 
+    line-height m(24) 
+    .uc-header-img-wrap
+        display inline-block
+        border m(2) solid #f
+        border-radius 50%
+        overflow hidden
+        img
+            width m(70)
+            height @width  
+            vertical-align middle
+    a
+        color inherit
+.uc-det
+    text-align center
+    height m(50)
+    background #FFF 
+    border-bottom $border 
+    .t-item
+        line-height m(43) 
+        div
+            border-left $border 
+    img
+        width m(25)
+        height m(25)  
+        vertical-align middle
+        margin-right m(15) 
+.user-center-page
+    .m-desc-wrap
+        display block
+        color #6
+        img
+            width m(20)
+            height @width
+            margin-right m(10)  
+            vertical-align middle
+.passwd-mod
+    margin-top m(20) 
+    div
+        margin-top m(12) 
+    input
+        width 100%
+        box-sizing border-box
+        border $border  
+        line-height m(44)
+        padding 0 m(10) 
+    button
+        margin-top m(35) 
+.user-pay
+    .m-desc-item
+        line-height m(60) 
+        img
+            width m(40)
+            height @width
+            border-radius m(10) 
+        
+    .chb
+        position absolute
+        right m(10)
+        top 50%
+        transform translate(0, -50%)
+        line-height m(10) 
+        text-align center
+        color transparent
+        input
+            display none
+            ~ span
+                display block
+                width m(15)
+                height m(15)
+                border 1px solid $orange
+            &:checked
+                ~ span
+                    color $orange
+            
+.user-pay-t
+    line-height m(115 / 2) 
+    .orange
+        font-size m(25)
+.user-payRecord
+    .m-desc-item
+        line-height m(80) 
+        .m-desc-c
+            img
+                float left
+                width m(45)
+                height @width
+                position relative
+                top m(16)
+                border-radius m(5)
+            div 
+                overflow hidden
+                line-height normal 
+                display inline-block
+                vertical-align middle
+        p,.m-desc-r
+            color #3
+.user-rank
+    table
+        line-height m(40)
+        text-align center 
+        border-left $border
+        td,th
+            border-right $border
+            border-bottom $border
+        tbody
+            background #FFF 
+.user-rank-nav
+    line-height m(30)
+    text-align center 
+    width 60% 
+    margin 0 auto
+    border 1px solid #f
+    border-radius m(8)
+    overflow auto
+    a
+        color #f
+        float left
+        width 50% 
+        &.current
+            background #f
+            color red
+        
+.empty-record
+    line-height m(100)
+    text-align center 
+
+//关于我们about-us
+.about-us
+    .about-us-wrap
+        position absolute
+        left 0
+        bottom 0
+        width 100% 
+        top m(65)
+        background #F2E7D1 
+    .about-us-m
+        position absolute
+        width 100% 
+        top 50%
+        transform translate(0,-50%)
+        
+    .img-wrap
+        line-height m(190)
+        text-align center
+        img
+            width (460/720 * 100%)
+            vertical-align bottom
+    .about-us-version,
+    .about-us-Copyright
+        color #939393
+        text-align center
+    .about-us-version
+        font-size m(20)
+        margin-top m(10)
+        color #ceb68a
+    .about-us-Copyright
+        width 100%
+        position absolute
+        bottom m(10)
+        font-size m(10)
+//生活轨迹life-orbit
+.life-orbit
+    overflow auto
+    .life-orbit-notice
+        font-size m(15)
+        color #000000
+        margin-left m(20)
+        padding m(20) m(10) 0 m(17)
+        border-left 1px solid #DDDDDD
+        text-align left
+        position relative
+        &:before
+            display block
+            position absolute
+            content ''
+            width m(10)
+            height m(10)
+            background img('life-ordit1.png') no-repeat
+            background-size 100%
+            left m(-5)
+            top m(25)
+//我的二维码
+.QR-code
+    .QR-code-content
+        position fixed
+        width 100%
+        height 100%
+        background-color #AE1F23
+        overflow hidden
+        .QR-code-img
+            width m(178)
+            height @width
+            margin m(60) auto 0 auto
+            overflow hidden
+            img
+                width 100%
+        .content-head
+            margin-top m(30)
+            text-align center
+            .content-name
+                color #F8CB23
+                font-size m(20)
+            .content-agency
+                margin-top m(10)
+                color #E8AF9D
+        

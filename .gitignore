@@ -3,5 +3,5 @@ node_modules/
 *.log
 .idea
 .idea/
-PSD/
+dist/
 # 此为注释 – 将被 Git 忽略

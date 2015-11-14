@@ -23,8 +23,7 @@ gulp.task('jade', function(){
 
 //编译js
 gulp.task('script', function(){
-  gulp.src('./src/script/**/*.js')
-    .pipe(gulp.dest('./dist/js'))
+  gulp.src('./src/js/**/*.js')
     .pipe(gulp.dest('./dist/js'))
     //.pipe(rename({suffix: '.min'}))
     //.pipe(uglify())
@@ -94,7 +93,4 @@ gulp.task('clean', function() {
 
 
 // 预设任务
-//gulp.task('default', ['clean'], function() {
-//  gulp.start('jade','stylus','script', 'image','watch', 'server');
-//});
 gulp.task('default', runSequence('jade','stylus','script', 'image','watch', 'server'));

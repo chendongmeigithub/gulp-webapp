@@ -1,10 +1,15 @@
 extends ./layout/common
 block title
-    title 首页
+  title gulp项目构建
 block style
-    +styles(['css/index.css'])
+  +styles(['css/index.css'])
 block body
-    - var bodyClass = ''
-
+  - var bodyClass = ''
 append content
-    .main 123123
+  .main 内容
+append script
+  +scripts(['js/jquery.min.js'])
+  script.
+    (function($, window, document){
+
+    })(jQuery, window, document)

@@ -1,15 +1,65 @@
 extends ./layout/common
 block title
-  title gulp项目构建
+  title 招行--摇钱树
 block style
-  +styles(['css/index.css'])
+  +styles(['public/css/index.css','public/css/csshake.css'])
 block body
   - var bodyClass = ''
 append content
-  .main 内容
+  .main
+    .tree(id="tree")
+      img(src="public/images/cash-cow.png")
+    .gold
+      img(src="public/images/gold.png")
+    .gold2
+      img(src="public/images/gold2.png")
+    .monkey
+      img(src="public/images/monkey.png")
+    .footer-button
+      .but-lottery(onclick="shake()")
+        img(src="public/images/get-prize.png")
+      a.activity-desc(href="#")
+        img(src="public/images/activity-description.png")
+      a.my-prize(href="#")
+        img(src="public/images/my-prize.png")
+  .shade(id="shade" onclick="hideWin()")
+  .con(id="winning")
+    img.prize1(src="public/images/prize-1.png")
+    .big 恭喜您！获得音乐会门票1张
+    p 1.领取方式和规则请点击"活动说明"进行查看
+    p 2.点击"查看我的奖品"可以查询您的奖品&#12288;&#12288;
+  .con(id="unwinning")
+    img.prize1(src="public/images/prize-2.png")
+    .big 很遗憾！您未中过奖
+    p 朝朝盈产品介绍：xxxxxxxx
 append script
-  +scripts(['public/js/jquery.min.js'])
   script.
-    (function($, window, document){
-
-    })(jQuery, window, document)
+    //显示中奖
+    function showWin() {
+      document.getElementById("shade").style.display = "block";
+      document.getElementById("winning").style.display = "block";
+    }
+    //显示未中奖
+    function showUnwin() {
+      document.getElementById("shade").style.display = "block";
+      document.getElementById("unwinning").style.display = "block";
+    }
+    //隐藏
+    function hideWin() {
+      document.getElementById("shade").style.display = "none";
+      document.getElementById("winning").style.display = "none";
+      document.getElementById("unwinning").style.display = "none";
+    }
+    //单击点击赢大奖调用函数
+    function shake(){
+      document.getElementById("tree").setAttribute("class","tree shake shake-constant");
+      setTimeout(function(){
+        document.getElementById("tree").setAttribute("class","tree");
+        var num = Math.ceil(Math.random()*10);
+        if(num%2){
+          showUnwin();
+        }else{
+          showWin();
+        }
+      },2000);
+    }

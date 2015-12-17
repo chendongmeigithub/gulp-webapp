@@ -14,7 +14,7 @@ var gulp = require('gulp'),
 
 //编译jade模板
 gulp.task('jade', function(){
-  gulp.src(['./src/view/**/*.jade', '!./src/view/include/**/*.jade', '!./src/view/layout/**/*.jade'])
+  gulp.src(['./src/view/index.jade'])
     .pipe(jade({
       pretty:true
     }))
@@ -23,7 +23,7 @@ gulp.task('jade', function(){
 
 //编译js
 gulp.task('script', function(){
-  gulp.src('./src/js/**/*.js')
+  gulp.src('./src/public/js/**/*.js')
     .pipe(gulp.dest('./dist/public/js'))
     //.pipe(rename({suffix: '.min'}))
     //.pipe(uglify())
@@ -33,7 +33,7 @@ gulp.task('script', function(){
 
 //编译样式文件并添加多浏览器样式自动补全
 gulp.task('stylus', function () {
-  gulp.src('./src/css/**/*.styl')
+  gulp.src('./src/public/css/index.styl')
     .pipe(stylus())
     .pipe(autoprefixer())
     .pipe(gulp.dest('./dist/public/css'))
@@ -45,7 +45,7 @@ gulp.task('stylus', function () {
 
 //复制图片到指定目录
 gulp.task('image', function(){
-  gulp.src('./src/image/**/*.{png,gif,jpg,svg}')
+  gulp.src('./src/public/images/**/*.{png,gif,jpg,svg}')
     .pipe(gulp.dest('./dist/public/images'));
 });
 
@@ -69,16 +69,16 @@ gulp.task('server', function(){
 
 //设置看守，并在文件发生更改后执行任务
 gulp.task('watch', function(){
-  watch('./src/view/**/*.jade', function(){
+  watch('./src/view/index.jade', function(){
     gulp.start('jade');
   });
-  watch('./src/css/**/*.styl', function(){
+  watch('./src/public/css/**/*.styl', function(){
     gulp.start('stylus');
   });
-  watch('./src/script/**/*.js', function(){
+  watch('./src/public/script/**/*.js', function(){
     gulp.start('script');
   });
-  watch('./src/image/**/*.{png,gif,jpg,svg}', function(){
+  watch('./src/public/images/**/*.{png,gif,jpg,svg}', function(){
     gulp.start('image');
   });
 
